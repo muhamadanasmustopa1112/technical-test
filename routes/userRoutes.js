@@ -6,16 +6,40 @@ const userController = require('../controllers/userController');
  * @swagger
  * /api/data:
  *   get:
- *     summary: Get all users
+ *     summary: Get paginated list of users
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         required: false
+ *         description: Page number (default is 1)
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         required: false
+ *         description: Number of users per page (default is 10)
  *     responses:
  *       200:
- *         description: Success
+ *         description: A list of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
  */
 router.get('/data', userController.getUsers);
 
 /**
  * @swagger
- * /api/gender-stats:
+ * /api/data/gender-stats:
  *   get:
  *     summary: Get all gender statistics
  *     responses:
