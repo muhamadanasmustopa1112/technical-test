@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const DataSchema = new mongoose.Schema({
   '': Number,
   Number: Number,
-  'Name of Location': Number,
+  'Name of Location': String,
   Date: String,
   'Login Hour': String,
   Name: String,            
