@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const DataSchema = new mongoose.Schema({
+  '': Number,
   Number: Number,
   'Name of Location': Number,
   Date: String,
