@@ -14,7 +14,7 @@ const userController = require('../controllers/userController');
  *           type: integer
  *           minimum: 1
  *         required: false
- *         description: Page number (default is 1)
+ *         description: This API may respond slowly for the first request due to free-tier hosting on Replit. Subsequent requests will be faster.
  *       - in: query
  *         name: limit
  *         schema:
